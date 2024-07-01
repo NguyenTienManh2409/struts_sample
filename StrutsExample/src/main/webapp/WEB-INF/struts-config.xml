@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" 
+"http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+	<form-beans>
+        <form-bean name="UserForm" type="com.mkyong.common.form.UserForm"/>
+    </form-beans>
+
+
+	<action-mappings>
+        <action path="/userList" type="com.mkyong.common.action.listUserAction" 
+        name="UserForm">
+            <forward name="success" path="/pages/userList.jsp"/>
+        </action>
+    </action-mappings>
+    
+    <action-mappings>
+		<action path="/createUser" type="com.mkyong.common.action.CreateUserAction"
+		name="UserForm" scope="request" validate="true" input="/createUser.jsp">
+			<forward name="success" path="/pages/success.jsp" />
+			<forward name="error" path="/pages/error.jsp" />
+			<forward name="input" path="/pages/createUser.jsp" />
+		</action>
+	</action-mappings>
+    
+    
+	<action-mappings>
+		<action
+			path="/Welcome"
+			type="org.apache.struts.actions.ForwardAction"
+			parameter="/pages/Welcome.jsp"/>
+		
+	</action-mappings>
+
+</struts-config>

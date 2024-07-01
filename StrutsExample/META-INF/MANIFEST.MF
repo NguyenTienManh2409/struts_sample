@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: StrutsExample
+Bundle-SymbolicName: StrutsExample
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: StrutsExample.jar,
+  admin/Downloads/mysql-connector-java-5.1.49.jar,
+  admin/Downloads/mysql-connector-java-5.1.49-sources.jar
+Export-Package: com.mkyong.common.DAO,
+ com.mkyong.common.action,
+ com.mkyong.common.form,
+ main.webapp,
+ main.webapp.pages
